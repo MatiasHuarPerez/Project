@@ -6,6 +6,8 @@ import { RxDotsVertical } from "react-icons/rx";
 import { FaArrowLeft } from "react-icons/fa";
 import contactService from "../../services/contactService";
 import NewMessageForm from "../NewMessageForm/NewMessageForm";
+import whatsappImage from "/img/NeymarPerfil.png"; // ajustá si la ruta es distinta
+
 
 
 const ChatPanel = () => {
@@ -13,7 +15,7 @@ const ChatPanel = () => {
   const navigate = useNavigate();
   const [contact, setContact] = useState(null);
   const [messages, setMessages] = useState([]);
-  const hasMounted = useRef(false); 
+  const hasMounted = useRef(false);
 
   useEffect(() => {
     const loadContact = async () => {
@@ -32,10 +34,16 @@ const ChatPanel = () => {
     await contactService.addMessageToContact(contactId, message);
 
 
-setMessages((prevMessages) => [...prevMessages, message]);
+    setMessages((prevMessages) => [...prevMessages, message]);
   };
 
-  if (!contact) return null;
+  if (!contact) {
+    return (
+      <div className="chat-placeholder">
+        <img src={whatsappImage} alt="WhatsApp" />
+      </div>
+    );
+  }
 
   return (
     <div className="chat-panel">

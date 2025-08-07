@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route, Outlet, useLocation, useParams } from "react-router-dom";
+import { Routes, Route, Outlet, useLocation } from "react-router-dom";
 import Sidebar from './Components/Sidebar/Sidebar';
 import Navbar from "./Components/Navbar/Navbar";
 import ContactList from "./Components/ContactList/ContactList";
 import ChatPanel from "./Components/ChatPanel/ChatPanel";
+import WhatsappImage from "./Components/WhatsappImage/WhatsappImage";
 import "./App.css";
 
 const Layout = () => {
@@ -34,6 +35,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
+        <Route index element={<WhatsappImage />} /> 
         <Route path="chat/:contactId" element={<ChatPanel />} />
       </Route>
     </Routes>
