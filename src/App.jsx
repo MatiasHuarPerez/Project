@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Outlet, useLocation,Router} from "react-router-dom";
 import Sidebar from './components/Sidebar/Sidebar';
-import Navbar from './components/NavBar/NavBar'
+import Navbar from './components/navbar/NavBar';
 import ContactList from "./components/ContactList/ContactList";
 import ChatPanel from "./components/ChatPanel/ChatPanel";
 import WhatsappImage from "./components/WhatsappImage/WhatsappImage";
