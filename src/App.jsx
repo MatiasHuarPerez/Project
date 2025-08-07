@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Outlet, useLocation,Router} from "react-router-dom";
-import Sidebar from './Components/Sidebar/Sidebar';
-import Navbar from "./Components/Navbar/Navbar";
-import ContactList from "./Components/ContactList/ContactList";
-import ChatPanel from "./Components/ChatPanel/ChatPanel";
-import WhatsappImage from "./Components/WhatsappImage/WhatsappImage";
+import Sidebar from './components/Sidebar/Sidebar';
+import Navbar from "./components/Navbar/Navbar";
+import ContactList from "./components/ContactList/ContactList";
+import ChatPanel from "./components/ChatPanel/ChatPanel";
+import WhatsappImage from "./components/WhatsappImage/WhatsappImage";
 import "./App.css";
 
 const Layout = () => {
